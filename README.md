@@ -7,3 +7,6 @@ Corona is an ultimate 2D development platform.You can build some games,ebooks,ut
 More info:
 http://www.coronalabs.com/
 
+
+Menu Structure for Corona SDK Games (or apps)
+https://github.com/tophermade/Menu-Structure
