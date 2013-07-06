@@ -141,7 +141,7 @@ local backBtn = display.newText("Back", 0, 0, native.systemFontBold, 24);
 	backBtn:setTextColor(205,0,0,255)
 	backBtn.x = _w/2;
 	backBtn.y = _h/2 - 45;
-	backBtn.scene = "menu";
+	backBtn.scene = "menuScene";
 	level_menu:insert(backBtn);
 	backBtn:addEventListener("touch", changeScene);
 
