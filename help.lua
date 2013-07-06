@@ -1,5 +1,6 @@
 module(..., package.seeall)
 
+
 function new()	
 	
 	-- we store everything inside this group at the end
@@ -20,7 +21,7 @@ function new()
 	local backBtn = display.newImage('backBtn.png')
 		backBtn.x = backBtn.width/2
 		backBtn.y = backBtn.height/2
-		backBtn.scene = "index"
+		backBtn.scene = "menu"
 		backBtn:addEventListener("touch",changeScene)
 		
 		

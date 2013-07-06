@@ -13,7 +13,7 @@ local function main()
 
 	mainGroup:insert(director.directorView)
 	
-	director:changeScene("index")
+	director:changeScene("menu")
 	return true
 end
 
