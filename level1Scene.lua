@@ -103,14 +103,16 @@ end
 
 function addGameMenuView()
 	background = display.newImage('level1Bg.jpg')
-	localGroup:insert(background)
 
+	
 	--Score Text
-	scoreTF = display.newText('0',303,22,system.nativeFont,12)
-	scoreTF:setTextColor(68,68,68)
+	scoreTF = display.newText('0',display.contentWidth /2 + 100,15,system.nativeFont,23)
+	scoreTF:setTextColor(6,6,6)
 	--Lives Text
-	livesTF = display.newText('x3',289,56,system.nativeFont,12)
-	livesTF:setTextColor(245,248,248)
+	livesTF = display.newText('x3',display.contentWidth/2 + 50, 15,system.nativeFont,23)
+	livesTF:setTextColor(0,255,0)
+
+	localGroup:insert(background)
 
 	addInitialBlocks(3)
 	addOptionsMenu()
@@ -118,9 +120,11 @@ function addGameMenuView()
 end
 
 function addOptionsMenu()
-	local optionsBtn = display.newImage('optionsBtn.png')
+	local optionsBtn = display.newText("Options",0,0,native.systemFontBold,23)
+	optionsBtn:setReferencePoint(display.CenterReferencePoint);
+	optionsBtn:setTextColor(0,0,0)
 	optionsBtn.x = optionsBtn.width/2;
-	optionsBtn.y =optionsBtn.height/2;
+	optionsBtn.y = 15;
 	optionsBtn.scene = "apps";
 	optionsBtn:addEventListener("touch", popMenu);	
 		

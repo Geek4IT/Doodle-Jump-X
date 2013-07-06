@@ -3,17 +3,17 @@ module(..., package.seeall)
 
 function new()	
 	
-	-- we store everything inside this group at the end
 	local localGroup = display.newGroup()		
 	
-	-- change scene function
 	function changeScene(e)
 		if(e.phase == "ended") then
 			director:changeScene(e.target.scene, "moveFromRight");
 		end
 	end
 		
-		
+	function exitGame()
+		os.exit()		
+	end	
 	
 	local background = display.newImage('background.png')
 		background.x = _w/2;
@@ -36,22 +36,20 @@ function new()
 		exitBtn.x = _w - exitBtn.width/2
 		exitBtn.y = _h - exitBtn.height/2
 		exitBtn.scene = "exit"
-		exitBtn:addEventListener("touch",changeScene)
+		exitBtn:addEventListener("touch",exitGame)
 		
 		
-	--- insert everything into the localGroup	
 	localGroup:insert(background)
 	localGroup:insert(playBtn)
 	localGroup:insert(helpBtn)
 	localGroup:insert(exitBtn)
 	
-	
-	-- clean everything up
+
 	clean = function ()
 	
 	end
 	
-	-- do not remove lest the sky shalt fall upon thine head
+
 	return localGroup
 	
 end
