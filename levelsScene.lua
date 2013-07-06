@@ -20,7 +20,7 @@ function new()
 	local backBtn = display.newImage('backBtn.png')
 		backBtn.x = backBtn.width/2
 		backBtn.y = backBtn.height/2
-		backBtn.scene = "menu"
+		backBtn.scene = "menuScene"
 		backBtn:addEventListener("touch",changeScene)
 
 	local level1Label = display.newText("level1#",0,0,native.systemFontBold,23)
@@ -28,7 +28,7 @@ function new()
 		level1Label:setTextColor(234,34,34,255)
 		level1Label.x = _w/2
 		level1Label.y = _h/2 - 30
-		level1Label.scene = "level1"
+		level1Label.scene = "level1Scene"
 		level1Label:addEventListener("touch",changeScene)
 
 
@@ -37,7 +37,7 @@ function new()
 		level2Label:setTextColor(234,34,34,255)
 		level2Label.x = _w/2
 		level2Label.y = _h/2 + 30
-		level2Label.scene = "level1"
+		level2Label.scene = "level1Scene"
 		level1Label:addEventListener("touch",changeScene)
 					
 		

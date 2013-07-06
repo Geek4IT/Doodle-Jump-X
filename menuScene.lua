@@ -23,7 +23,7 @@ function new()
 	local playBtn = display.newImage('playBtn.png')
 		playBtn.x = _w/2
 		playBtn.y = _h/2 - 45
-		playBtn.scene = "selectlevel"
+		playBtn.scene = "levelChooser"
 		playBtn:addEventListener("touch",changeScene)
 
 	local helpBtn = display.newImage('helpBtn.png')
